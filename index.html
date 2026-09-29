@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ab maan bhi jao!</title>
+    <title>Sweetu ab man bhi jao n!</title>
     <style>
         * {
             box-sizing: border-box;
@@ -31,13 +31,13 @@
         }
         h1 {
             color: #ff4d6d;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 26px;
+            margin-bottom: 15px;
         }
         p {
             color: #555;
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .btn-group {
             display: flex;
@@ -67,7 +67,7 @@
             background-color: #cccccc;
             color: #333;
             position: absolute;
-            left: 55%; /* Initial position next to Yes button */
+            left: 55%;
         }
         .hidden-message {
             display: none;
@@ -79,6 +79,7 @@
         }
         .emoji {
             font-size: 50px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -86,11 +87,11 @@
 
     <div class="card" id="mainCard">
         <div class="emoji">🥺👉👈</div>
-        <h1>Ab maan bhi jao na!</h1>
+        <h1>Sweetu ab man bhi jao n</h1>
         <p>Gussa khatam karein?</p>
         
         <div class="btn-group">
-            <button id="yesBtn" onclick="sayYes()">Yes ❤️️</button>
+            <button id="yesBtn" onclick="sayYes()">Yes ❤</button>
             <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()" ontouchstart="moveButton()">No 😜</button>
         </div>
     </div>
@@ -105,7 +106,6 @@
         function moveButton() {
             const noBtn = document.getElementById('noBtn');
             
-            // Screen dimensions ke hisab se random position calculate karna
             const padding = 50;
             const maxX = window.innerWidth - noBtn.offsetWidth - padding;
             const maxY = window.innerHeight - noBtn.offsetHeight - padding;
@@ -113,7 +113,6 @@
             const randomX = Math.floor(Math.random() * (maxX - padding)) + padding;
             const randomY = Math.floor(Math.random() * (maxY - padding)) + padding;
 
-            // Button ko body par absolute position kar ke door bhejna
             noBtn.style.position = 'fixed';
             noBtn.style.left = randomX + 'px';
             noBtn.style.top = randomY + 'px';
